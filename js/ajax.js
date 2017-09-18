@@ -4,7 +4,7 @@
 		function localitation (position){
 				$.ajax({
 					type: 'GET',
-					url : 'http://api.openweathermap.org/data/2.5/weather?lat='+ position.coords.latitude +'&lon=' + position.coords.longitude + "&units=metric&appid=9f50a805aa0089a1edd1829a5db029f0",
+					url : 'https://api.openweathermap.org/data/2.5/weather?lat='+ position.coords.latitude +'&lon=' + position.coords.longitude + "&units=metric&appid=9f50a805aa0089a1edd1829a5db029f0",
 					dataType: 'jsonp'
 				})
 				.done(function( data ){
