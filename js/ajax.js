@@ -21,15 +21,15 @@
 	// -----------------------------------------------------------------------------
 
 	function mostrar_datos (data){
-
 		var date = new Date();
 		var arrayData = data;
 		var html = "";
 		for (var value in arrayData.weather) {
 			var valor=arrayData.weather[value];
 		}
+		var minutes = date.getMinutes() < 10 ? "0"+date.getMinutes() : date.getMinutes();
 
-		html+='<h1>'+arrayData.name+', <small>'+arrayData.sys.country+' '+date.getDate()+'/'+date.getMonth()+'/'+date.getFullYear()+' '+date.getHours()+': '+date.getMinutes()+'</small></h1>';
+		html+='<h1>'+arrayData.name+', <small>'+arrayData.sys.country+' '+date.getDate()+'/'+(date.getMonth()+1)+'/'+date.getFullYear()+' '+date.getHours()+': '+minutes+'</small></h1>';
 		html+='<hr>';
 		html+='<div class="weather col-md-6">';
 			html+='<img src ="img/'+valor.icon+'.png">';
