@@ -28,8 +28,9 @@
 			var valor=arrayData.weather[value];
 		}
 		var minutes = date.getMinutes() < 10 ? "0"+date.getMinutes() : date.getMinutes();
+		var hours = date.getHours() < 10 ? "0"+date.getHours() : date.getHours();
 
-		html+='<h1>'+arrayData.name+', <small>'+arrayData.sys.country+' '+date.getDate()+'/'+(date.getMonth()+1)+'/'+date.getFullYear()+' '+date.getHours()+': '+minutes+'</small></h1>';
+		html+='<h1>'+arrayData.name+', <small>'+arrayData.sys.country+' '+date.getDate()+'/'+(date.getMonth()+1)+'/'+date.getFullYear()+' '+hours+': '+minutes+'</small></h1>';
 		html+='<hr>';
 		html+='<div class="weather col-md-6">';
 			html+='<img src ="img/'+valor.icon+'.png">';
